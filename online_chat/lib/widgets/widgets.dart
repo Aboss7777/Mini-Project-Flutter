@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 const textInputDecoration = InputDecoration(
   labelStyle: TextStyle(color: Color.fromARGB(255, 250, 245, 245), fontWeight: FontWeight.w300),
   focusedBorder: OutlineInputBorder(
@@ -11,3 +12,12 @@ const textInputDecoration = InputDecoration(
     borderSide: BorderSide(color: Color.fromARGB(191, 132, 57, 232), width: 2),
   ),
 );
+
+
+void nextScreen(context, page){
+  Navigator.push(context, MaterialPageRoute(builder: (context) => page));
+}
+
+void nextScreenReplace(context, page){
+  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => page));
+}
